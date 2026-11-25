@@ -1,0 +1,41 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Streamlit: open Edge (detached)",
+      "detail": "Pre-launch of the 'Streamlit + Edge' configuration. Starts .vscode/open-edge.ps1 as a detached background process: no debugger attachment to the browser, and the task returns immediately so that Python debugging starts without delay.",
+      "type": "process",
+      "command": "${env:SystemRoot}\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-Command",
+        "Start-Process -FilePath 'powershell.exe' -WindowStyle Hidden -ArgumentList '-NoProfile','-ExecutionPolicy','Bypass','-File','${workspaceFolder}/.vscode/open-edge.ps1'"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "reveal": "never",
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Streamlit: kill port 8501",
+      "detail": "Optional. Frees port 8501 if a zombie Streamlit instance is still listening. Not referenced by launch.json.",
+      "type": "shell",
+      "command": "for /f \"tokens=5\" %p in ('netstat -ano ^| findstr :8501') do taskkill /PID %p /F",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      }
+    }
+  ]
+}

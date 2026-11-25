@@ -1,0 +1,136 @@
+Copyright (c) 2026 EL FILALI SALAH ADDINE. All Rights Reserved.
+PROPRIETARY & SOURCE-AVAILABLE ACADEMIC RESEARCH LICENSE:
+This software, architectural blueprint, and documentation ('AURA-Learn') are the exclusive intellectual property of EL FILALI SALAH ADDINE. Viewing and executing this code is authorized exclusively for academic evaluation by the selection committee and supervisors (Prof. Dr. Babette Bühler, Prof. Dr. Ulrich Trautwein) of the Hector Research Institute of Education Sciences and Psychology (University of Tübingen) in connection with the 'PhD AI in Education' application, and for official doctoral supervision upon admission. Any copying, redistribution, modification, commercial exploitation, or external reuse without prior written consent from the author is strictly prohibited.
+
+================================================================================
+AURA-LEARN — PROPRIETARY & SOURCE-AVAILABLE ACADEMIC RESEARCH LICENSE
+================================================================================
+Version 1.0 — Effective date: 2026
+Licensor and sole rights holder: EL FILALI SALAH ADDINE ("the Author")
+Licensed material: the AURA-Learn source code (app.py), the dependency manifest
+(requirements.txt), this license, and the accompanying README documentation
+(collectively, "the Software").
+
+--------------------------------------------------------------------------------
+1. GRANT OF LIMITED LICENSE
+--------------------------------------------------------------------------------
+Subject to full compliance with this License, the Author grants a personal,
+non-exclusive, non-transferable, non-sublicensable, royalty-free and strictly
+limited right to view and execute the Software solely for:
+  (a) academic evaluation of the Author's application for the "PhD AI in
+      Education" position by the selection committee and the designated
+      supervisors (Prof. Dr. Babette Bühler, Prof. Dr. Ulrich Trautwein) of the
+      Hector Research Institute of Education Sciences and Psychology
+      (University of Tübingen); and
+  (b) official doctoral supervision of the Author upon admission to the said
+      doctoral programme.
+This limited license is revocable at any time, with immediate effect, by
+written notice from the Author. No other rights are granted, whether by
+implication, estoppel or otherwise. All rights not expressly granted remain
+vested in the Author.
+
+--------------------------------------------------------------------------------
+2. STRICT PROHIBITIONS
+--------------------------------------------------------------------------------
+Without the prior written consent of the Author, it is strictly prohibited to:
+  (a) copy, reproduce, mirror, clone or fork the Software, in whole or in part;
+  (b) redistribute, publish, disclose, transmit or make the Software available
+      to any third party, including on any code-hosting platform, repository,
+      package registry, website or publication;
+  (c) modify, adapt, translate, transform, decompile or create derivative works
+      based on the Software;
+  (d) sublicense, rent, lease, lend, sell, resell or otherwise commercially
+      exploit the Software or any part thereof;
+  (e) reuse the Software, its architecture, its rule set or its documentation
+      in any external project, product, publication, teaching material or
+      assessment, whether academic or commercial;
+  (f) use the Software, in whole or in part, as training data, fine-tuning data,
+      retrieval corpus, prompt material or evaluation benchmark for any machine
+      learning or generative model;
+  (g) remove, obscure or alter any copyright, authorship or proprietary notice
+      contained in the Software.
+
+--------------------------------------------------------------------------------
+3. NO OPEN-SOURCE STATUS
+--------------------------------------------------------------------------------
+The Software is NOT open source. Access to its source code does not confer, and
+shall not be construed as conferring, any right, title or interest beyond the
+limited rights expressly granted in Section 1. The availability of the source
+code is provided solely for transparency, reproducibility and academic review
+purposes. No permission is granted to use, reuse, distribute or exploit the
+Software under any public, community or permissive licensing regime.
+
+--------------------------------------------------------------------------------
+4. SYNTHETIC DATA DISCLAIMER
+--------------------------------------------------------------------------------
+The Software operates exclusively on synthetic, hard-coded and entirely
+fictitious data, including simulated eye-tracking signals, simulated video
+stream status and simulated digital interaction traces. No real personal data,
+no real learner records and no human subjects are involved. No data collection,
+no sensor capture, no camera access and no biometric processing of any
+identifiable person is performed or required. Any resemblance to real learners,
+institutions or cases is purely coincidental.
+
+--------------------------------------------------------------------------------
+5. NON-PRODUCTION / RESEARCH PROTOTYPE
+--------------------------------------------------------------------------------
+The Software is a research and demonstration prototype provided "AS IS" and
+"AS AVAILABLE", without warranty of any kind, express or implied, including but
+not limited to warranties of merchantability, fitness for a particular purpose,
+accuracy, reliability or non-infringement. No support, maintenance, update or
+error-correction obligation is assumed. The Software does not constitute a
+validated pedagogical, medical, psychological or clinical device, and must not
+be used for diagnosis, assessment, decision-making about real persons, or any
+operational deployment.
+
+--------------------------------------------------------------------------------
+6. NO ENDORSEMENT
+--------------------------------------------------------------------------------
+Nothing in the Software, its documentation or its outputs expresses, implies or
+establishes any affiliation, approval, sponsorship, certification or official
+partnership with the University of Tübingen, the Hector Research Institute of
+Education Sciences and Psychology, or any of their members. References to these
+institutions are made exclusively to describe the academic evaluation context of
+the Author's application.
+
+--------------------------------------------------------------------------------
+7. OWNERSHIP OF FEEDBACK
+--------------------------------------------------------------------------------
+Any feedback, comment, suggestion, correction or insight provided in connection
+with the academic evaluation, review or supervision of the Software may be used
+freely by the Author, without restriction, attribution obligation or
+compensation, for research, development and publication purposes.
+
+--------------------------------------------------------------------------------
+8. TERMINATION
+--------------------------------------------------------------------------------
+Any breach of this License automatically and immediately terminates all rights
+granted hereunder, without prior notice. Upon termination, the licensee must
+immediately cease all use of the Software and permanently destroy or delete all
+copies, extracts and derivative materials in its possession or control, and
+confirm such destruction to the Author in writing upon request.
+
+--------------------------------------------------------------------------------
+9. GOVERNING LAW & SEVERABILITY
+--------------------------------------------------------------------------------
+This License is governed by and construed in accordance with the laws of
+Morocco, without regard to conflict-of-law principles. If any provision of this
+License is held invalid or unenforceable, that provision shall be limited or
+eliminated to the minimum extent necessary, and the remaining provisions shall
+remain in full force and effect. In case of any discrepancy between translations,
+the English version of this License shall prevail.
+
+--------------------------------------------------------------------------------
+10. CONTACT
+--------------------------------------------------------------------------------
+All requests for any additional license, permission, collaboration or written
+authorization must be addressed in writing to the Author:
+
+  EL FILALI SALAH ADDINE
+  Sole copyright holder — AURA-Learn
+
+================================================================================
+© 2026 EL FILALI SALAH ADDINE — All Rights Reserved.
+Proprietary & Source-Available Academic Research License. Not an open-source
+license.
+================================================================================
