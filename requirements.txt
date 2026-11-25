@@ -1,3 +1,6 @@
-streamlit>=1.36.0
+# The [pdf] extra installs `streamlit-pdf`, which provides `st.pdf` (Streamlit
+# >= 1.49). Without it, `st.pdf` raises and the previous data-URI iframe
+# fallback was silently blocked by Chrome/Edge -- hence this extra is required.
+streamlit[pdf]>=1.67
 pandas>=2.1.0
 requests>=2.31.0

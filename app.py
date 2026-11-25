@@ -38,7 +38,6 @@ Execution:
 
 from __future__ import annotations
 
-import base64
 import json
 from datetime import datetime, timezone
 from pathlib import Path
@@ -923,8 +922,8 @@ def render_header_links() -> None:
 def render_document_page(doc_key: str) -> None:
     """Displays a document sub-page (same structure as the reference).
 
-    Order: back button, title, embedded document (``st.pdf`` with base64
-    iframe fallback) or explicit warning if the file is missing.
+    Order: back button, title, embedded document (``st.pdf``) or explicit
+    warning if the file is missing.
     """
     title = DOCUMENT_TITLES.get(doc_key, "Document")
     hints = DOCUMENT_FILE_HINTS.get(doc_key, [])
@@ -964,18 +963,25 @@ def render_document_page(doc_key: str) -> None:
         key=f"download_doc_{doc_key}",
     )
 
-    # Embedded preview: ``st.pdf`` if available, otherwise a base64 iframe
-    # (same fallback strategy as the AURA-Grid reference).
-    try:
-        st.pdf(pdf_bytes, height=900, alt=f"Preview of {filename}")
-    except Exception:
-        b64 = base64.b64encode(pdf_bytes).decode("ascii")
-        iframe = (
-            '<iframe src="data:application/pdf;base64,'
-            + b64
-            + '" width="100%" height="900" style="border:0;"></iframe>'
+    # Embedded preview through ``st.pdf`` only. A data-URI iframe
+    # ("data:application/pdf;base64,...") must never be reintroduced here:
+    # Chromium/Edge block PDFs embedded that way ("page blocked").
+    pdf_viewer = getattr(st, "pdf", None)
+    if pdf_viewer is None:
+        st.warning(
+            "Inline PDF preview is unavailable: this Streamlit build has no "
+            "`st.pdf` (provided by `streamlit-pdf`). Install "
+            "`streamlit[pdf]>=1.67` (see aura-learn/requirements.txt) to "
+            "enable it. The download button above still works."
         )
-        components.html(iframe, height=900, scrolling=True)
+        return
+
+    try:
+        pdf_viewer(pdf_bytes, height=900, alt=f"Preview of {filename}")
+    except Exception as exc:
+        st.warning(
+            f"Unable to render the PDF preview ({type(exc).__name__}): {exc}"
+        )
 
 
 def render_top_notice() -> None:
